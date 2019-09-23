@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy & Notify
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
     - master
 
 jobs:
-  build:
+  notify-slack:
 
     runs-on: ubuntu-latest
     
@@ -16,7 +16,7 @@ jobs:
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: 'Deployed GitHub Pages'
+        job_name: 'Deploy GitHub Pages'
         channel: '#igolopolosov-github-io-notifications'
         url: ${{ secrets.SLACK_WEBHOOK }}
         icon_emoji: github
