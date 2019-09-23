@@ -1,4 +1,4 @@
-name: CI
+name: Deploy
 
 on:
   push:
@@ -16,6 +16,8 @@ jobs:
       if: always()
       with:
         type: ${{ job.status }}
-        job_name: '*Deploy github pages*'
+        job_name: 'Deployed GitHub Pages'
         channel: '#igolopolosov-github-io-notifications'
         url: ${{ secrets.SLACK_WEBHOOK }}
+        icon_emoji: github
+        username: GitHub workflows
