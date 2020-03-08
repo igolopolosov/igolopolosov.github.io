@@ -17,7 +17,7 @@ jobs:
       with:
         type: ${{ job.status }}
         job_name: 'Deploy GitHub Pages'
-        channel: '#igolopolosov-github-io-notifications'
+        channel: '#release-notifications'
         url: ${{ secrets.SLACK_WEBHOOK }}
-        icon_emoji: github
-        username: GitHub workflows
+        icon_emoji: beers
+        username: igolopolosov.github.io GitHub workflows
