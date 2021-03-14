@@ -3,7 +3,7 @@ name: Deploy & Notify
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   notify-slack:
